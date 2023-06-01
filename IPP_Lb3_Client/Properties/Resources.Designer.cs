@@ -45,7 +45,7 @@ namespace IPP_Lb3.Properties
                 if ((resourceMan == null))
                 {
                     global::System.Resources.ResourceManager temp =
-                        new global::System.Resources.ResourceManager("IPP_Lb3.Properties.Resources",
+                        new global::System.Resources.ResourceManager("IPP_Lb3_Client.Properties.Resources",
                             typeof(Resources).Assembly);
                     resourceMan = temp;
                 }

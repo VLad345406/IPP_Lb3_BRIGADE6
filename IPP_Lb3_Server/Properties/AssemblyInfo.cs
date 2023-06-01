@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("IPP_Lb3")]
+[assembly: AssemblyTitle("IPP_Lb3_Server")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("IPP_Lb3")]
+[assembly: AssemblyProduct("IPP_Lb3_Server")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("F6D88B91-2F1B-498E-B64B-BD548890F6D5")]
+[assembly: Guid("3B693C41-5997-4729-A766-359583F64C5A")]
 
 // Version information for an assembly consists of the following four values:
 //

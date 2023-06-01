@@ -1,6 +1,6 @@
-﻿namespace IPP_Lb3
+﻿namespace IPP_Lb3.Windows
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
