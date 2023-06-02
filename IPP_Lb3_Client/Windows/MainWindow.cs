@@ -9,7 +9,8 @@ namespace IPP_Lb3.Windows
 {
     public partial class MainWindow : Form
     {
-        private const string ServerIp = "192.168.31.208";
+        //private const string ServerIp = "192.168.31.208";
+        private const string ServerIp = "127.0.0.1";
 
         private static void StartDrawSin()
         {

@@ -11,7 +11,8 @@ namespace IPP_Lb3_Server.Windows
     {
         private async Task StartServer()
         {
-            var listener = new TcpListener(IPAddress.Parse("192.168.31.208"), 1111);
+            //var listener = new TcpListener(IPAddress.Parse("192.168.31.208"), 1111);
+            var listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 1111);
             listener.Start();
 
             while (true) {
