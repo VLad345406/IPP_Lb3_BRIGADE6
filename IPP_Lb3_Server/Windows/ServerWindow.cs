@@ -1,12 +1,55 @@
 ﻿using System;
-using System.Drawing;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace IPP_Lb3_Server.Windows
 {
     public partial class ServerWindow : Form
     {
+        private async Task StartServer()
+        {
+            var listener = new TcpListener(IPAddress.Parse("192.168.31.208"), 1111);
+            listener.Start();
+
+            while (true) {
+                TcpClient client = await listener.AcceptTcpClientAsync();
+
+                _ = HandleClientAsync(client);
+            }
+        }
+        
+        private async Task HandleClientAsync(TcpClient client) {
+            var stream = client.GetStream();
+
+            // Receive the request from the client
+            var request = await FunctionReceive(stream);
+
+            switch (request)
+            {
+                case "1":
+                {
+                    DrawSin();
+                    break;
+                }
+                case "2":
+                {
+                    DrawPar();
+                    break;
+                }
+            }
+            client.Close();
+        }
+        
+        private static async Task<string> FunctionReceive(NetworkStream stream)
+        {
+            var resultBuffer = new byte[1024];
+            var resultBytesRead = await stream.ReadAsync(resultBuffer, 0, resultBuffer.Length);
+            return Encoding.ASCII.GetString(resultBuffer, 0, resultBytesRead);
+        }
+        
         private void DrawSin()
         {
             const double a = -10;
@@ -51,16 +94,7 @@ namespace IPP_Lb3_Server.Windows
         private void ServerWindow_Load(object sender, EventArgs e)
         {
             chart1.Series[0].BorderWidth = 3;
-        }
-
-        private void buttonSin_Click(object sender, EventArgs e)
-        {
-            DrawSin();
-        }
-
-        private void buttonPar_Click(object sender, EventArgs e)
-        {
-            DrawPar();
+            StartServer();
         }
     }
 }

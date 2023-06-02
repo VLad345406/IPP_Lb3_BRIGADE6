@@ -33,8 +33,6 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.buttonSin = new System.Windows.Forms.Button();
-            this.buttonPar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +43,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 52);
+            this.chart1.Location = new System.Drawing.Point(12, 12);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -56,38 +54,15 @@
             series1.LegendText = "Sin";
             series1.Name = "Series";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(776, 386);
+            this.chart1.Size = new System.Drawing.Size(776, 426);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            // 
-            // buttonSin
-            // 
-            this.buttonSin.Location = new System.Drawing.Point(115, 12);
-            this.buttonSin.Name = "buttonSin";
-            this.buttonSin.Size = new System.Drawing.Size(144, 31);
-            this.buttonSin.TabIndex = 1;
-            this.buttonSin.Text = "Sin";
-            this.buttonSin.UseVisualStyleBackColor = true;
-            this.buttonSin.Click += new System.EventHandler(this.buttonSin_Click);
-            // 
-            // buttonPar
-            // 
-            this.buttonPar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonPar.Location = new System.Drawing.Point(385, 12);
-            this.buttonPar.Name = "buttonPar";
-            this.buttonPar.Size = new System.Drawing.Size(144, 31);
-            this.buttonPar.TabIndex = 2;
-            this.buttonPar.Text = "-y=x*x";
-            this.buttonPar.UseVisualStyleBackColor = true;
-            this.buttonPar.Click += new System.EventHandler(this.buttonPar_Click);
             // 
             // ServerWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonPar);
-            this.Controls.Add(this.buttonSin);
             this.Controls.Add(this.chart1);
             this.Name = "ServerWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -96,9 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
         }
-
-        private System.Windows.Forms.Button buttonSin;
-        private System.Windows.Forms.Button buttonPar;
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
 
